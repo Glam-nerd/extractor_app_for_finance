@@ -106,7 +106,7 @@ if uploaded_file is not None:
         officer_name = str(officer_cell).strip()
 
         if i + 2 < df.shape[1]:
-          block = df.iloc[2:, [i, i + 1, i + 2]].copy()
+          block = df.iloc[1:, [i, i + 1, i + 2]].copy()
           block.columns = ["Date", "Repayment Amount", "Recovery Amount"]
           block["Officer name"] = officer_name
           all_data.append(block)
